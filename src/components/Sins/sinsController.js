@@ -12,8 +12,6 @@ async function getAllSins(req, res) {
 
 }
 
-
-
 module.exports = {
     hi,
     getAllSins,
