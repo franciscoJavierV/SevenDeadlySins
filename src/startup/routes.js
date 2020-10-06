@@ -1,7 +1,7 @@
 const express = require('express');
 const helmet = require('helmet');
 const cors = require('cors');
-const sinsComponent = require('../components/SinsServices');
+const sinsComponent = require('../components/Sins');
 
 module.exports = (app) => {
     // Configuración de middlewares
