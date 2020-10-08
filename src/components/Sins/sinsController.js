@@ -3,8 +3,17 @@ const sinsService = require('./sinsService');
 async function hi(req, res) {
   res.send('hi');
 }
+
 async function index(req, res ){
   res.render('index')
+}
+
+async function new_soldier(req, res ){
+  res.render('new_soldier')
+}
+
+async function new_sin(req, res ){
+  res.render('new_sin')
 }
 
 async function getUserInfo(req, res) {
@@ -39,4 +48,6 @@ module.exports = {
     getUserInfo,
     index,
     create,
+    new_soldier,
+    new_sin,
 };

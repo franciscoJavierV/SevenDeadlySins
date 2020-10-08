@@ -1,6 +1,7 @@
 const express = require('express');
 const helmet = require('helmet');
 const cors = require('cors');
+//Model
 const sinsComponent = require('../components/Sins');
 
 module.exports = (app) => {
@@ -17,4 +18,4 @@ module.exports = (app) => {
     // Configuración componentes
     app.use('/', sinsComponent.routes);
 
-  };
+};
