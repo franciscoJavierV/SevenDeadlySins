@@ -1,16 +1,18 @@
 const express = require('express');
 const morgan = require('morgan');
 const body_parser = require('body-parser');
+const bodyParser = require('body-parser');
 const helmet = require("helmet");
 const cors = require("cors");
 const path = require("path");
 
+
+
+
 //initializations
 const app = express();  
 //settings
-app.set('port' , process.env.PORT ||  3000);
-app.set('views' , path.join(__dirname , 'views'))
-app.set('view engine', 'ejs')
+app.use(bodyParser.urlencoded({ extended: false }));
 
 const corsOptions = 
 {
@@ -24,7 +26,12 @@ app.use(helmet.permittedCrossDomainPolicies());
 app.use(morgan('dev'));
 app.use(express.json());
 app.use(cors(corsOptions));
+
+
 app.use(body_parser.urlencoded({extended:true}));
+app.set('port' , process.env.PORT ||  3000);
+app.set('views' , path.join(__dirname , 'views'))
+app.set('view engine', 'ejs')
 
 require('dotenv').config();
 

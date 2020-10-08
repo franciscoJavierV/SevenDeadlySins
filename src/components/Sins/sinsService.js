@@ -5,26 +5,27 @@ async function findById(userid) {
   return user;
 }
 
-async function getAll(query) {
-  const users = sins.find(query);
+async function getAll() {
+  const users = await sins.find();
   return users;
 }
 
-async function createUser( user ) {
-    console.log(user)
-    console.log("create user ",user.user)
-    const { name, power, figth } = user;
-    console.log("nuevo nombre",name)
-    const createUserId = await sins.create({
+
+async function createSins( data ){
+  console.log(data)
+    const { name, power, figths, fightPicUrl, couple } = data;  
+    const newSin = await sins.create({
       name,
       power,
-      figth,
+      figths,
+      fightPicUrl,
+      couple
     });
-    return createUserId;
+    return newSin; 
   }
 
 module.exports = {
-  createUser,
+  createSins,
   findById,
   getAll,
 };
