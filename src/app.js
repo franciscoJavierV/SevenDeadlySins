@@ -45,3 +45,6 @@ require('./startup/database');
 app.listen(app.get('port'), () =>{
     console.log(`server on port ${app.get('port')}`)
 });
+
+//static files
+app.use(express.static(path.join(__dirname, 'public')));

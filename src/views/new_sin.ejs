@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pecado capital</title>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    	<link rel="stylesheet" href="/styles/styles.css">
+</head>
+<body>
+    <div class="background" style="background-image: url('/assets/background.jpg');">
+		<div class="container">
+			<div class="mini_container">
+				<div class="image" data-tilt>
+					<img src="/assets/sins.jpg" width="500px" height="300px" alt="IMG">
+				</div>
+
+				<form action="/sin" method="post" enctype="multipart/form-data">
+					<span class="form_title">
+						Registrar Pecado capital
+					</span>
+
+					<div class="input">
+						<input class="input100" type="text" id="name" name="name" placeholder="Nombre del pecado capital">
+						<span class="focus-input100"></span>
+					</div>
+
+					<div class="input">
+						<input class="input100" type="text" id="power" name="power" placeholder="Poder">
+						<span class="focus-input100"></span>
+					</div>
+
+					<div class="input">
+						<input class="input100" type="text" id="fights" name="fights" placeholder="Pelea">
+						<span class="focus-input100"></span>
+					</div>
+					
+					<div class="input">
+						<input class="input100" type="text" id="couple" name="couple" placeholder="Nombre de la pareja">
+						<span class="focus-input100"></span>
+                    </div>
+                    
+                    <div class="custom-file">
+                        <input type="file" id="image" name="image" class="custom-file-input" id="inputGroupFile02">
+                        <label class="custom-file-label" for="inputGroupFile02" aria-describedby="inputGroupFileAddon02"></label>
+                    </div>
+
+                    <div class="container_button">
+						<button class="button">
+							Registrar pecado
+						</button>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

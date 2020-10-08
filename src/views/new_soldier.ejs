@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soldado sacro</title>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    	<link rel="stylesheet" href="/styles/styles.css">
+</head>
+<body>
+    <div class="background" style="background-image: url('/assets/background.jpg');">
+		<div class="container">
+			<div class="mini_container">
+				<div class="image" data-tilt>
+					<img src="/assets/soldiers.png" width="400px" height="400px" alt="IMG">
+				</div>
+
+				<form action="/soldier" method="post" enctype="multipart/form-data">
+					<span class="form_title">
+						Registrar Soldado sacro
+					</span>
+
+					<div class="input">
+						<input class="input100" type="text" name="name" placeholder="Nombre del soldado">
+						<span class="focus-input100"></span>
+					</div>
+
+					<div class="input">
+						<input class="input100" type="text" name="benef" placeholder="Poder demoniaco">
+						<span class="focus-input100"></span>
+					</div>
+
+					<div class="input">
+						<input class="input100" type="text" id="fights" name="fights" placeholder="Pelea">
+						<span class="focus-input100"></span>
+					</div>
+
+					<div class="input">
+						<input class="input100" type="text" id="opponent" name="opponent" placeholder="Contrincante">
+						<span class="focus-input100"></span>
+					</div>
+
+                    <div class="container_button">
+						<button class="button">
+							Registrar soldado
+						</button>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
