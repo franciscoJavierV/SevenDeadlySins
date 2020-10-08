@@ -4,18 +4,21 @@ const sinsSchema = new mongoose.Schema({
   name: {
     type: String,
     required: true,
-    minlength: 5,
-    maxlength: 50,
   },
   power: {
       type: Number,
       required:true
   },
-  fight : {
+  fights : {
       type: Object,
       required: false
   },
-  isAdmin: Boolean,  
+  couple : {
+    type : String,
+  }, 
+  fightPicUrl : {
+    type: String,
+  },
 });
 
 const User = mongoose.model('Sins', sinsSchema);
