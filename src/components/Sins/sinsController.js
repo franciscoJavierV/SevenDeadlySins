@@ -5,12 +5,20 @@ async function index(req, res ){
   res.render('index')
 }
 
-async function new_soldier(req, res ){
-  res.render('new_soldier')
+async function new_knight(req, res ){
+  res.render('new_knight')
 }
 
 async function new_sin(req, res ){
   res.render('new_sin')
+}
+
+async function show_sins(req, res ){
+  res.render('show_sins')
+}
+
+async function show_fights(req, res ){
+  res.render('show_fights')
 }
 
 async function getUserInfo(req, res) {
@@ -33,10 +41,15 @@ async function create(req ,res){
   return res.send(newSin);
 }
 
-async function getAll(req , res) {
+/*async function getAll(req, res) {
   const users = await sinsService.getAll();
   console.log(users)
   return users;
+}*/
+
+async function getAll(req, res) {
+  const users = await sinsService.getAll;
+  res.render('show_sins', { users });
 }
 
 async function prueba(req, res){
@@ -49,7 +62,9 @@ module.exports = {
     getUserInfo,
     index,
     create,
-    new_soldier,
+    new_knight,
     prueba,
     new_sin,
+    show_sins,
+    show_fights,
 };

@@ -3,7 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="styles/fonts/font-awesome-4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="/styles/styles.css">
+    <link rel="stylesheet" href="/styles/menu.css">
     <title>Seven Deadly Sins</title>
 </head>
 <body>
@@ -13,8 +15,31 @@
         <div class="background" style="background-image: url('/assets/background.jpg');">
             <div class="container">
                 <div class="mini_container">
+                    <div class="navbar">
+                        <a class="active" href="Index.html">Inicio
+                            <i class="fa fa-home" aria-hidden="true"></i>
+                        </a>
+                        <div class="servicios">
+                            <button class="serviciosbtn">Agregar
+                                <i class="fa fa-caret-down"></i>
+                            </button>
+                            <div class="servicios-content">
+                                <a href="/knight">Agregar caballero sacro</a>
+                                <a href="/sin">Agregar pecado capital</a>
+                            </div>
+                        </div>
+                        <div class="servicios">
+                            <button class="serviciosbtn">Listar
+                                <i class="fa fa-caret-down"></i>
+                            </button>
+                            <div class="servicios-content">
+                                <a href="show_sins">Listado de pecados capitales</a>
+                                <a href="show_fights">Listado de peleas</a>
+                            </div>
+                        </div>
+                        <!--
                     <div class="container_button">
-						<a class="button" href="/soldier">
+						<a class="button" href="/knight">
 							Agregar caballero sacro
                         </a>
                     </div>
@@ -23,7 +48,20 @@
 						<a class="button" href="/sin">
 							Agregar pecado capital
                         </a>
-					</div>
+                    </div>
+                    
+                    <div class="container_button">
+						<a class="button" href="/show_sins">
+							Listado de pecados capitales
+                        </a>
+                    </div>
+                    
+                    <div class="container_button">
+						<a class="button" href="/show_fights">
+							Listado de peleas
+                        </a>
+                    </div>
+                -->
                 </div>
             </div>
         </div>

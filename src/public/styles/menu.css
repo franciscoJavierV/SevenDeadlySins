@@ -1,0 +1,71 @@
+.navbar {
+  overflow: hidden;
+  background-color: #333;
+  font-family: Montserrat-Regular, sans-serif;
+  border-bottom: 6px solid rgb(160, 11, 11);
+}
+
+/* Links inside the navbar */
+.navbar a {
+  float: left;
+  font-size: 14px;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  border-right: 1px solid #fff;
+}
+
+.navbar p {
+  float: left;
+  font-size: 14px;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  border-right: 1px solid #fff;
+}
+
+/* The dropdown container */
+.servicios {
+  float: left;
+  overflow: hidden;
+}
+
+.servicios .serviciosbtn {
+  font-size: 14px;
+  border: none;
+  outline: none;
+  color: white;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit; 
+  margin: 0; 
+  border-right: 1px solid #fff;
+}
+
+.servicios-content {
+  display: none;
+  position: absolute;
+  background-color: #333;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.navbar a:hover, .servicios:hover .serviciosbtn, .contactenos:hover, .horario:hover {
+  background-color: rgb(39, 3, 3);
+}
+
+.servicios-content a {
+  float: none;
+  color: white;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.servicios:hover .servicios-content {
+  display: block;
+}

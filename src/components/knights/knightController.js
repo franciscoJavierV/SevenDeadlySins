@@ -17,7 +17,7 @@ async function create(req ,res){
     opponent,
   }
   const newknigth = await knightService.createKnights(data);
-  return res.redirect('/soldier');
+  return res.redirect('/knight');
 }
 
 async function getAll(req , res) {
