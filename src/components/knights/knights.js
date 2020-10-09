@@ -9,16 +9,12 @@ const knightsSchema = new mongoose.Schema({
       type: Number,
       required:true
   },
-  fights : {
-      type: Array,
-      required: false
-  },
-  couple : {
-    type : String,
-  }, 
-  fightPicUrl : {
+  fights:{
     type: String,
   },
+  opponent :{
+      type:Array,
+  }
 });
 
 const knights = mongoose.model('Knights', knightsSchema);
