@@ -42,6 +42,11 @@ async function getAll(req , res) {
   return users;
 }
 
+async function prueba(req, res){
+  console.log(req.body)
+  return res.redirect('/sin')
+}
+
 module.exports = {
     hi,
     getAll,
@@ -49,5 +54,6 @@ module.exports = {
     index,
     create,
     new_soldier,
+    prueba,
     new_sin,
 };
