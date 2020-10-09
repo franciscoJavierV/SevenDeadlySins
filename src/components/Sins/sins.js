@@ -9,8 +9,8 @@ const sinsSchema = new mongoose.Schema({
       type: Number,
       required:true
   },
-  fights : {
-      type: Object,
+  figths : {
+      type: String,
       required: false
   },
   couple : {

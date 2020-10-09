@@ -23,7 +23,7 @@ async function create(req ,res){
 async function getAll(req , res) {
   const knigths = await knightService.getAll();
   console.log(knigths)
-  return res.send('hi');
+  return res.redirect('/');
 }
 
 module.exports = {

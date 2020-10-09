@@ -14,11 +14,13 @@ async function new_sin(req, res ){
 }
 
 async function show_sins(req, res ){
-  res.render('show_sins')
+  const sin = await sinsService.getAll();
+  res.render('show_sins', { sin })
 }
 
 async function show_fights(req, res ){
-  res.render('show_fights')
+  const sin = await sinsService.getAll();
+  res.render('show_fights' , {sin})
 }
 
 async function getUserInfo(req, res) {
@@ -41,14 +43,8 @@ async function create(req ,res){
   return res.send(newSin);
 }
 
-/*async function getAll(req, res) {
-  const users = await sinsService.getAll();
-  console.log(users)
-  return users;
-}*/
-
 async function getAll(req, res) {
-  const users = await sinsService.getAll;
+  const users = await sinsService.getAll();
   res.render('show_sins', { users });
 }
 

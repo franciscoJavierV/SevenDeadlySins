@@ -14,19 +14,21 @@
                 <span class="form_title">
                     Peleas
                 </span>
-
                 <table class="table">
                     <tr>
                         <td>NOMBRE DEL PECADO O SOLDADO</td>
                         <td>CONTRINCANTE</td>
                         <td>IMAGEN PELEA</td>
                     </tr>
-
+                </tr>
+                <% if(sin.length) { %>
+                    <% sin.forEach(function(user){ %>
                     <tr>
-                        <td>x</td>
-                        <td>x</td>
-                        <td></td>
+                        <td><%= user.name %></td>
+                        <td><%= user.figths%></td>
                     </tr>
+                    <% }) %>
+                <% } %>
                 </table>
             </div>
         </div>
