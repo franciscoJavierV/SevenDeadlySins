@@ -3,28 +3,27 @@ const knightService = require('./knightService');
 
 async function getUserInfo(req, res) {
   console.log(req.body)
-  const user = await knightService.findById(req.body.id);
-  res.send(user);
+  const knigths = await knightService.findById(req.body.id);
+  res.send(knigths);
 }
 
 async function create(req ,res){
   console.log(req.body)
-  const {name, power, figths , couple, fightPicUrl } =  req.body
+  const {name, power, fights , opponent } =  req.body
   const data = {
     name,
     power,
-    figths,
-    couple,
-    fightPicUrl,
+    fights,
+    opponent,
   }
-  const newSin = await knightService.createSins(data);
-  return res.send(newSin);
+  const newknigth = await knightService.createKnights(data);
+  return res.redirect('/soldier');
 }
 
 async function getAll(req , res) {
-  const users = await knightService.getAll();
-  console.log(users)
-  return users;
+  const knigths = await knightService.getAll();
+  console.log(knigths)
+  return res.send('hi');
 }
 
 module.exports = {

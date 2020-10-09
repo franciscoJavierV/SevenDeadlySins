@@ -10,16 +10,14 @@ async function getAll() {
   return users;
 }
 
-
 async function createKnights( data ){
   console.log(data)
-    const { name, power, figths, fightPicUrl, couple } = data;  
+    const { name, power, fights, opponent,  } = data;  
     const newSin = await knights.create({
       name,
       power,
-      figths,
-      fightPicUrl,
-      couple
+      fights,
+      opponent,
     });
     return newSin; 
   }

@@ -4,6 +4,7 @@ const bodyParser = require('body-parser');
 const cors = require('cors');
 //Model
 const sinsComponent = require('../components/Sins');
+const knightsComponent = require('../components/knights');
 
 module.exports = (app) => {
     // Configuración de middlewares
@@ -19,5 +20,6 @@ module.exports = (app) => {
   
     // Configuración componentes
     app.use('/', sinsComponent.routes);
+    app.use('/', knightsComponent.routes)
 
 };
