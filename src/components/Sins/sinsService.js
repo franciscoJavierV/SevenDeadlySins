@@ -1,15 +1,14 @@
 const { sins } = require("./sins");
 
 async function findById(userid) {
-  const user = await sins.findById(userid);
-  return user;
+  const sins = await sins.findById(userid);
+  return sins;
 }
 
 async function getAll() {
-  const users = await sins.find();
-  return users;
+  const sin = await sins.find();
+  return sin;
 }
-
 
 async function createSins( data ){
   console.log(data)
@@ -19,7 +18,7 @@ async function createSins( data ){
       power,
       figths,
       fightPicUrl,
-      couple
+      couple,
     });
     return newSin; 
   }
